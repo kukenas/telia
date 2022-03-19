@@ -1,0 +1,39 @@
+# Virtual Environment related files
+**venv
+
+# Pycharm settings:
+.idea
+
+#Egg info files produced by pip installation
+*egg-info
+
+# Pycache and compiled python files
+.DS_Store
+**/.DS_Store
+
+# Pycache and compiled python files
+**/*__pycache__
+__pycache__
+
+# Pytest cache files
+**/*.pytest_cache
+
+# No need to copy, as it gets generated every time tests are run
+**/Report.html
+**/test/assets
+
+# Ignore generated files
+**/*.pyc
+
+# Desktop Services Store
+.DS_Store
+
+# Ignore git files
+.gitignore
+
+# Ignore logs
+logs/*.log
+
+# Ignore docker files
+.dockerignore
+Dockerfile
