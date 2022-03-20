@@ -13,6 +13,7 @@ COPY . /app
 WORKDIR /app
 
 # In case any external libraries are used
+RUN pip install --upgrade pip
 RUN pip install -r /app/requirements.txt
 
 # Make the script executable

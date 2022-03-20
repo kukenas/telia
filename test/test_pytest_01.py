@@ -2,17 +2,15 @@ import pytest
 
 import main
 
-pytest.directions = ["NORTH", "SOUTH", "EAST", "WEST"]
 
-pytest.direction_1 = ["NORTH", "SOUTH", "EAST", "WEST"]
-
-pytest.direction_2 = ["NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST"]
-
-pytest.direction_3 = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]
-
-pytest.direction_4 = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH"]
-
-pytest.direction_5 = ["NORTH", "WEST", "SOUTH", "EAST"]
+@pytest.fixture(autouse=True, scope='session')
+def directions():
+    pytest.directions = ["NORTH", "SOUTH", "EAST", "WEST"]
+    pytest.direction_1 = ["NORTH", "SOUTH", "EAST", "WEST"]
+    pytest.direction_2 = ["NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST"]
+    pytest.direction_3 = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]
+    pytest.direction_4 = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH"]
+    pytest.direction_5 = ["NORTH", "WEST", "SOUTH", "EAST"]
 
 
 def test_empty_path():

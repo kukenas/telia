@@ -28,12 +28,9 @@ __pycache__
 # Desktop Services Store
 .DS_Store
 
-# Ignore git files
+# Ignore version control files
+.git/
 .gitignore
 
 # Ignore logs
 logs/*.log
-
-# Ignore docker files
-.dockerignore
-Dockerfile

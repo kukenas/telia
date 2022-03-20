@@ -1,4 +1,5 @@
 import logging
+import pathlib
 from logging.handlers import RotatingFileHandler
 
 
@@ -40,4 +41,7 @@ class Logger:
         return self.log
 
 
-LOG = Logger("TeliaChallenge", "../logs/application.log").logger
+# Get absolute path
+current_dir = pathlib.Path(__file__).parent.resolve()
+
+LOG = Logger("TeliaChallenge", str(current_dir) + "/../logs/application.log").logger
